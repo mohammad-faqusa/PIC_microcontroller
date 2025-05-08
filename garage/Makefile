@@ -1,0 +1,19 @@
+# MPLAB IDE generated this makefile for use with GNU make.
+# Project: garage.mcp
+# Date: Thu May 08 17:25:34 2025
+
+AS = MPASMWIN.exe
+CC = mcc18.exe
+LD = mplink.exe
+AR = mplib.exe
+RM = rm
+
+garage.cof : garage.o
+	$(LD) /l"C:\MCC18\lib" "C:\MCC18\lkr\18f4550.lkr" "garage.o" "C:\MCC18\lib\p18f4550.lib" /z__MPLAB_BUILD=1 /z__MPLAB_DEBUG=1 /o"garage.cof" /M"garage.map" /W
+
+garage.o : garage.c C:/MCC18/h/delays.h garage.c C:/MCC18/h/p18f4550.h C:/MCC18/h/p18cxxx.h
+	$(CC) -p=18F4550 "garage.c" -fo="garage.o" -D__DEBUG -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+
+clean : 
+	$(RM) "garage.o" "garage.cof" "garage.hex"
+
